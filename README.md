@@ -1,59 +1,29 @@
-# CameraApp
+# Camera App 📷
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.19.
+A web-based Camera Application built using **Angular**, designed to capture photos directly from the browser and manage camera-related functionality in a clean and responsive UI.
 
-## Development server
+This project is developed as a **personal project** to demonstrate frontend development skills using Angular, camera access, and component-based architecture.
 
-To start a local development server, run:
+---
 
-```bash
-ng serve
-```
+## 🚀 Features
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- Access device camera using browser APIs
+- Capture photos in real time
+- Modular Angular component structure
+- Responsive UI design
+- Clean separation of frontend and backend (if applicable)
 
-## Code scaffolding
+---
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## 🛠️ Tech Stack
 
-```bash
-ng generate component component-name
-```
+- **Frontend:** Angular (v19)
+- **Language:** TypeScript
+- **Styling:** CSS
+- **Tools:** Angular CLI
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+---
 
-```bash
-ng generate --help
-```
+## 📂 Project Structure
 
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
