@@ -1,0 +1,49 @@
+<div class="camera-container">
+
+  <h2>Sankalp Concepts</h2>
+
+  <p class="datetime">
+    Date: {{ currentDate }} | Time: {{ currentTime }}
+  </p>
+
+  <video #video autoplay></video>
+
+  <div class="buttons">
+    <button (click)="startCamera()">Start Camera</button>
+    <button (click)="capturePhoto()">Capture Photo</button>
+  </div>
+
+  <!-- Photo Preview -->
+  <div *ngIf="previewPhoto" class="preview">
+    <img [src]="previewPhoto" />
+    <div class="preview-buttons">
+      <button class="save" (click)="savePhoto()">Save</button>
+      <button class="cancel" (click)="cancelPreview()">Cancel</button>
+    </div>
+  </div>
+
+  <!-- Gallery -->
+  <div class="gallery">
+    <div *ngFor="let p of photos; let i = index">
+      <img [src]="p.img" />
+      <div class="photo-actions">
+        <small>Date: {{p.date}} | Time: {{p.time}}</small><br>
+        <small *ngIf="p.lat && p.lng">Lat: {{p.lat | number:'1.5-5'}} | Lng: {{p.lng | number:'1.5-5'}}</small><br>
+        <button class="retake-btn" (click)="retakePhoto(i)">Retake</button>
+        <button class="delete-btn" (click)="deletePhoto(i)">Delete</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Upload / Clear -->
+  <div class="upload-container">
+    <button class="upload" [disabled]="photos.length === 0" (click)="uploadAll()">Upload All</button>
+    <button class="clear" [disabled]="photos.length === 0" (click)="clearAll()">Clear All</button>
+  </div>
+
+  <!-- Uploading popup -->
+  <div *ngIf="uploading" class="upload-popup">
+    <div class="popup-content">Uploading your images...</div>
+  </div>
+
+</div>
